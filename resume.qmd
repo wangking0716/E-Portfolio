@@ -2,7 +2,7 @@
 title: "Resume"
 ---
 
-# Education2
+# Education
 
 -   **Master of Geomatics for Environmental Management (2024-)**
 
