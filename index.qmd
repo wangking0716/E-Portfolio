@@ -21,4 +21,6 @@ about:
 
 Hey there,
 
-This is your E-Portfolio landing page. Be sure to upload a professional headshot of yourself, and provide the appropriate links to your professional social media (linkedin, X/Twitter, etc). This is also a good place to provide a short summary of your education, career and interests. If you are associated with a lab or working with a research supervisor, it may be appropriate to provide some information on that here, along with links to relevant websites. 
+My name is King. I graduated from UBC Natural Resources Conservation in 2024 summer. As an international student living in the province of British Columbia for over ten years, I developed my passion for nature adventure through attending various outdoor activities. Hence, the beautiful natural environment of BC has stimulated my enthusiasm for environmental science and management. Throughout my undergraduate journey at UBC, I gained a deep understanding of how GIS and remote sensing for natural resources management and conservation. I was impressed by the power of the new technology and realized how advanced technology could help us make better decisions from the environmental science perspective.
+
+ 
