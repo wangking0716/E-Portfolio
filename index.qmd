@@ -16,7 +16,7 @@ about:
       href: https://github.com/ramonmelser
     - icon: envelope-at
       text: Email
-      href: mailto:melser@student.ubc.ca
+      href: wangking9876@gmail.com
 ---
 
 Hey there,
