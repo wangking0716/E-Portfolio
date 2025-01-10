@@ -2,39 +2,47 @@
 title: "Resume"
 ---
 
-# Education
+# Education2
 
--   List your education here. 
+-   **Master of Geomatics for Environmental Management (2024-)**
+
+    -   Learned landscape ecology /management courses focuses on landscape quantification modeling and environmental management
+
+-   **Bachelor of Science Natural Resources Conservation: Major in Science and Management (2019-2023)**
+
+    -   Taken variety courses regards to plants biology, soil science, hydrology, and wildlife management skill
+    -   Gain strong knowledge on aquatic system (estuary and floodplains) of lower mainland BC and hand-on experience in variety of filed work
+    -   Knowledge of computer skill applications in forestry and environmental management (R, ArcGIS, ENVI)
+    -   Strong knowledge of different forest classification systems, including world forest classification systems, the BEC system, and ecosystem diagnosis in the field
 
 # Publications
 
 *Peer-reviewed publications:*
 
-- List any peer-reviewed publications here.
+-   List any peer-reviewed publications here.
 
 *Reports:*
 
-- List any non-peer reviewed materials you'd like to share here.
+-   List any non-peer reviewed materials you'd like to share here.
 
 # Conferences & Talks
 
 *Invited Talks*
 
-- If you've been invited to speak in a professional setting, list that here. 
+-   If you've been invited to speak in a professional setting, list that here.
 
 *Conference Presentations*
 
-- If the presentation was at a conference, list them here. 
+-   If the presentation was at a conference, list them here.
 
 # Awards & Honors
 
-- List any scholarships, bursaries, etc. 
-
+-   List any scholarships, bursaries, etc.
 
 # Teaching Assistantships
 
-- List any TA positions you may have held. 
+-   List any TA positions you may have held.
 
 # Institutional Service
 
-- Volunteering etc. 
+-   Volunteering etc.
