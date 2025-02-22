@@ -1,6 +1,6 @@
 ---
 title: "King Wang"
-image: images/IMG_1468.png
+image: images/IMG_1468.jpg
 about:
   template: trestles
   image-width: 20em
