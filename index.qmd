@@ -1,6 +1,6 @@
 ---
 title: "King Wang"
-image: images/MGEM_logo.png
+image: images/IMG_1468.png
 about:
   template: trestles
   image-width: 20em
