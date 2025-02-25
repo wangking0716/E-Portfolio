@@ -4,11 +4,11 @@ title: "Resume"
 
 # Education
 
--   **Master of Geomatics for Environmental Management (2024-)**
+-   **Master of Geomatics for Environmental Management (2024-2025)**
 
     -   Learned landscape ecology /management courses focuses on landscape quantification modeling and environmental management
     -   Apply geospatial expertise to encounter real-world scenario related to environmental management issues through labs, projects and workshops
-    -   Gain
+    -   Took variety courses focused on analytical and quantitative methods in GIS, spatial statistics, spatial data analysis, and programming in R and Python
 
 -   **Bachelor of Science Natural Resources Conservation: Major in Science and Management (2019-2023)**
 
@@ -43,8 +43,18 @@ title: "Resume"
 
 # Teaching Assistantships
 
--   List any TA positions you may have held.
+-   **UBC Forestry FRST100 Undergraduate Teaching Assistance (Sep. 2022 - Dec. 2022)**
+    -   Grading homework, assignment, midterm, and final exam
+    -   Monitor the course website
+    -   Invigilation and respond to student emails, class discussion boards
 
 # Institutional Service
 
--   Volunteering etc.
+-   **UBC Beaty Biodiversity Museum Educator (Oct. 2023 - Nov. 2024)**
+    -   Represent the museum on the floor and provide support for special museum events and school programs
+    -   Answer questions about the museum, provide variety activities, and have meaningful discussion with visitors about the significance of biodiversity
+    -   Work with experienced museum staff, UBC biodiversity researchers, and learned about current biodiversity research through training programs
+-   **UBC Reading Week Volunteers Community Storytelling (Feb. 2022)**
+    -   Build a sense of belonging and community connection in Vancouver
+    -   Gain organization and time management skills required for short project delivery
+    -   Develop effective group working, communication, and collaboration skills
