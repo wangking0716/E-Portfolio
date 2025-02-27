@@ -3,15 +3,15 @@ project:
   output-dir: C:/Users/pwang19.stu/OneDrive - UBC/Documents/GitHub/E-Portfolio
 
 website:
-  title: "Your E-Portfolio"
+  title: "King Wang"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: About me
       - href: resume.qmd
         text: Resume
       - href: publications.qmd
-        text: Work/project
+        text: Work & project
       - href: content.qmd
         text: Content & Deliverables
 
