@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+title: "work/project"
 ---
 
 *Peer-reviewed publications:*
