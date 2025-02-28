@@ -17,29 +17,50 @@ title: "Resume"
     -   Knowledge of computer skill applications in forestry and environmental management (R, ArcGIS, ENVI)
     -   Strong knowledge of different forest classification systems, including world forest classification systems, the BEC system, and ecosystem diagnosis in the field
 
-# Publications
+# Research and projects
 
-*Peer-reviewed publications:*
+-   **Effectiveness Monitoring Plan for Active Restoration of Coho Salmon Habitat in an Oregon Watershed**
 
--   List any peer-reviewed publications here.
+    Group project \| Advisor: Dr. Nolan Bett and Dr. Scott Hinch, UBC (Oct. 2023)
 
-*Reports:*
+    -   Plan an active restoration program that focuses on limiting factors of coho salmon freshwater production
+    -   Propose two relevant restoration activities with an appropriate effectiveness assessment monitoring plan
 
--   List any non-peer reviewed materials you'd like to share here.
+-   **Challenges of Greener Electricity Energy Implementation Around the World**
 
-# Conferences & Talks
+    Independent research \| Advisor: Dr. Emmanuel Ackom (May 2022)
 
-*Invited Talks*
+    -   The main renewable electricity generation are highly variable and heavily depend on regional weather and geography
 
--   If you've been invited to speak in a professional setting, list that here.
+    -   Access to electricity is still a great challenge to some developing countries or regions
 
-*Conference Presentations*
+    -   Challenge of world’s electricity security due to high demand
 
--   If the presentation was at a conference, list them here.
+# Field Experiences
 
-# Awards & Honors
+-   **Fraser River Estuary Fish Abundance and Species Diversity (Sep. 2023)**
 
--   List any scholarships, bursaries, etc.
+    -    Capture fish using beach seines in active Fraser River estuary research sites (Vancouver and Richmond)
+
+    -   Identify and record information on different species of fish • Monitor compensation sites and reference sites • Provide report to compare the abundance and composition of Fraser River estuary fish at various marsh sites
+
+-   **Fish Passage Through a Self-Regulating Floodgate in Colony Farms Coquitlam (Oct. 2023)**
+
+    -    Gain hands-on experience in handling, measuring, and inserting PIT tags into juvenile salmon
+
+    -   Handling minnow traps on the filed and identify the fish that has been captured by the traps
+
+    -   Gain knowledge on current research project of “fish friendly” floodgate in Colony Farm
+
+    -   Generate report of the fish passage behavior regarding to abiotic and biotic factors based on the data provided by Zachery Sherker, a PhD Candidate in the Pacific Salmon Ecology and Conservation Lab
+
+-   **Restoration activities monitoring and their impacts in verity streams of Langley, BC (Nov. 2023)**
+
+    -    Visit several streams in Langley and get insight into the restriction project of the streams
+
+    -   Understand the current/past restoration project of the streams and the potential challenges or issues that still exist
+
+    -   Report based on the restoration project that has been implemented and identified potential problems or improvement that could be make
 
 # Teaching Assistantships
 
