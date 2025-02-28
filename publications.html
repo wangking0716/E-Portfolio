@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>King Wang - work &amp; project</title>
+<title>King Wang - Work &amp; Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,14 +116,27 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#raster-and-least-cost-path-analysis-using-qgis-and-arcgis-pro" id="toc-raster-and-least-cost-path-analysis-using-qgis-and-arcgis-pro" class="nav-link active" data-scroll-target="#raster-and-least-cost-path-analysis-using-qgis-and-arcgis-pro"><strong><em>Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro</em></strong></a></li>
+  <li><a href="#trees-points-cloud-data-handle-by-lidr-package-in-r-studio" id="toc-trees-points-cloud-data-handle-by-lidr-package-in-r-studio" class="nav-link" data-scroll-target="#trees-points-cloud-data-handle-by-lidr-package-in-r-studio">Trees points cloud data handle by lidR package in R studio</a>
+  <ul class="collapse">
+  <li><a href="#individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc" id="toc-individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc" class="nav-link" data-scroll-target="#individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc">Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC</a></li>
+  <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code snippets</a></li>
+  <li><a href="#d-figures" id="toc-d-figures" class="nav-link" data-scroll-target="#d-figures">2D figures</a></li>
+  <li><a href="#visualized-canopy-height-model-in-3d" id="toc-visualized-canopy-height-model-in-3d" class="nav-link" data-scroll-target="#visualized-canopy-height-model-in-3d">Visualized Canopy Height Model in 3D</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">work &amp; project</h1>
+<h1 class="title">Work &amp; Project</h1>
 </div>
 
 
@@ -140,7 +153,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong><em>Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro</em></strong></p>
+<section id="raster-and-least-cost-path-analysis-using-qgis-and-arcgis-pro" class="level1">
+<h1><strong><em>Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro</em></strong></h1>
 <p><strong>QGIS</strong></p>
 <ul>
 <li><p>Rasterize the study area of grizzly bear shapefile using GDAL</p>
@@ -175,8 +189,62 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><img src="images/Screenshot_27-2-2025_231036_.jpeg" class="img-fluid" width="643"></p>
 <p><strong>Map showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta</strong></p>
+</section>
+<section id="trees-points-cloud-data-handle-by-lidr-package-in-r-studio" class="level1">
+<h1>Trees points cloud data handle by lidR package in R studio</h1>
+<section id="individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc" class="level2">
+<h2 class="anchored" data-anchor-id="individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc">Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC</h2>
+</section>
+<section id="code-snippets" class="level2">
+<h2 class="anchored" data-anchor-id="code-snippets">Code snippets</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<pre class="(.r)"><code>library(lidR)
+#read normalized las into catalog to continue processing
+norm_cat_mkrf &lt;- readLAScatalog("Normalized")
+#add LAScatalog enginge option to filter undersired data points
+opt_filter(norm_cat_mkrf) &lt;- '-drop_z_below 0 -drop_z_above 65'
+#for loop to extract multiple plots
+for(i in 1:nrow(plot_table)){ #run the loop until i = the number of rows in 'plot_table' (20)
+  plot_cent &lt;- c(plot_table$X[i], plot_table$Y[i]) #extract plot center
+  plot_las &lt;- clip_circle(norm_cat_mkrf, plot_cent[1], plot_cent[2], radius) #clip plot from norm_cat_las
+  output_file &lt;- paste("Plots/MKRF_Plot_", i, ".las", sep = "") #output directory as string
+  writeLAS(assign(paste("MKRF_Plot_", i, sep = ""), plot_las), output_file) #write'MKRF_Plot_i' to output dir.
+}
+#using li2012 algorithm for single tree#
+#plot1
+plot1_segment &lt;- segment_trees(MKRF_Plot_1,li2012(dt1=1.5,dt2=2,Zu=15,R=2,speed_up=10))
+plot(plot1_segment, color = "treeID") # Color trees by unique ID</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="d-figures" class="level2">
+<h2 class="anchored" data-anchor-id="d-figures">2D figures</h2>
+<p><img src="images/Screenshot (95).png" class="img-fluid"></p>
+<p>MKRF_Plot_1</p>
+</section>
+<section id="visualized-canopy-height-model-in-3d" class="level2">
+<h2 class="anchored" data-anchor-id="visualized-canopy-height-model-in-3d">Visualized Canopy Height Model in 3D</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">R</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<pre class="(.r)"><code>#Create CHM for normalized Tile 1
+chm_mkrf_1 &lt;- rasterize_canopy(norm_mkrf_1, 2, p2r())
+plot(chm_mkrf_1, col = col_1) #plot in 2D
+plot_dtm3d(chm_mkrf_1) #plot in 3D</code></pre>
+</div>
+</div>
+</div>
+<p><img src="images/Screenshot 2025-02-28 001138.png" class="img-fluid" width="687"></p>
+<p>3D figure of MKRF CHM</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

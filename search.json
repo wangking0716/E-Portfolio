@@ -16,9 +16,9 @@
   {
     "objectID": "publications.html",
     "href": "publications.html",
-    "title": "work & project",
+    "title": "Work & Project",
     "section": "",
-    "text": "Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro\nQGIS\n\nRasterize the study area of grizzly bear shapefile using GDAL\n\nThe polygons represent Grizzly Bear population units in the Rocky Mountain foothills of Alberta\n\nMosaicked 14 DEM tiles in the region into single raster using GDAL Merge tool.\nClipped the single DEM raster to the rasterize grizzly bear study area for further analysis\nGenerate a total cost raster representing cost of movement for grizzly bears\nThe cost factors include:\n\nslope\nland cover\nroad crossing\n\ncombined these factors using own-defined weights to create cost raster\n\nArcGIS Pro:\n\nPerform a least cost path analysis in ArcGIS Pro\n\ndefine the optimal route for moving between primary and secondary habitats\n\nAdding layers created in QGIS:\n\nTotal cost raster\nDEM of the study area\nslope, land cover, roads\nprimary/ secondary habitats\n\nUsing Distance Accumulation and Optimal Path as Line tool to create least-cost path between the primary and secondary habitats\n\n\nMap showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta"
+    "text": "QGIS\n\nRasterize the study area of grizzly bear shapefile using GDAL\n\nThe polygons represent Grizzly Bear population units in the Rocky Mountain foothills of Alberta\n\nMosaicked 14 DEM tiles in the region into single raster using GDAL Merge tool.\nClipped the single DEM raster to the rasterize grizzly bear study area for further analysis\nGenerate a total cost raster representing cost of movement for grizzly bears\nThe cost factors include:\n\nslope\nland cover\nroad crossing\n\ncombined these factors using own-defined weights to create cost raster\n\nArcGIS Pro:\n\nPerform a least cost path analysis in ArcGIS Pro\n\ndefine the optimal route for moving between primary and secondary habitats\n\nAdding layers created in QGIS:\n\nTotal cost raster\nDEM of the study area\nslope, land cover, roads\nprimary/ secondary habitats\n\nUsing Distance Accumulation and Optimal Path as Line tool to create least-cost path between the primary and secondary habitats\n\n\nMap showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta"
   },
   {
     "objectID": "content_development.html",
@@ -54,5 +54,33 @@
     "title": "Content & Deliverables",
     "section": "",
     "text": "You can also provide a frame linking to external websites. For example, here is a link to a Google Earth Engine application I developed. The full-screen GEE application is available here in case you’re interested.\n(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)"
+  },
+  {
+    "objectID": "publications.html#code-snippets",
+    "href": "publications.html#code-snippets",
+    "title": "Work & Project",
+    "section": "Code snippets",
+    "text": "Code snippets\n\nR\n\n\nlibrary(lidR)\n#read normalized las into catalog to continue processing\nnorm_cat_mkrf &lt;- readLAScatalog(\"Normalized\")\n#add LAScatalog enginge option to filter undersired data points\nopt_filter(norm_cat_mkrf) &lt;- '-drop_z_below 0 -drop_z_above 65'\n#for loop to extract multiple plots\nfor(i in 1:nrow(plot_table)){ #run the loop until i = the number of rows in 'plot_table' (20)\n  plot_cent &lt;- c(plot_table$X[i], plot_table$Y[i]) #extract plot center\n  plot_las &lt;- clip_circle(norm_cat_mkrf, plot_cent[1], plot_cent[2], radius) #clip plot from norm_cat_las\n  output_file &lt;- paste(\"Plots/MKRF_Plot_\", i, \".las\", sep = \"\") #output directory as string\n  writeLAS(assign(paste(\"MKRF_Plot_\", i, sep = \"\"), plot_las), output_file) #write'MKRF_Plot_i' to output dir.\n}\n#using li2012 algorithm for single tree#\n#plot1\nplot1_segment &lt;- segment_trees(MKRF_Plot_1,li2012(dt1=1.5,dt2=2,Zu=15,R=2,speed_up=10))\nplot(plot1_segment, color = \"treeID\") # Color trees by unique ID"
+  },
+  {
+    "objectID": "publications.html#d-figures",
+    "href": "publications.html#d-figures",
+    "title": "Work & Project",
+    "section": "2D figures",
+    "text": "2D figures\n\nMKRF_Plot_1"
+  },
+  {
+    "objectID": "publications.html#visualized-canopy-height-model-in-3d",
+    "href": "publications.html#visualized-canopy-height-model-in-3d",
+    "title": "Work & Project",
+    "section": "Visualized Canopy Height Model in 3D",
+    "text": "Visualized Canopy Height Model in 3D\n\nR\n\n\n#Create CHM for normalized Tile 1\nchm_mkrf_1 &lt;- rasterize_canopy(norm_mkrf_1, 2, p2r())\nplot(chm_mkrf_1, col = col_1) #plot in 2D\nplot_dtm3d(chm_mkrf_1) #plot in 3D\n\n\n\n\n3D figure of MKRF CHM"
+  },
+  {
+    "objectID": "publications.html#individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc",
+    "href": "publications.html#individual-tree-detection-within-a-plot-in-malcolm-knapp-research-forest-mkrf-ubc",
+    "title": "Work & Project",
+    "section": "Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC",
+    "text": "Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC"
   }
 ]
