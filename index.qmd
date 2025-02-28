@@ -4,19 +4,6 @@ image: images/IMG_1468.jpg
 about:
   template: trestles
   image-width: 20em
-  links: 
-    - icon: linkedin
-      text: LinkedIn
-      href: linkedin 
-    - icon: twitter
-      text: Twitter/X
-      href: twitter 
-    - icon: github
-      text: GitHub
-      href: github
-    - icon: envelope-at
-      text: Email
-      href: wangking9876@gmail.com
 ---
 
 Welcome to my portfolio
