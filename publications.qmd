@@ -48,9 +48,9 @@ title: "Work & Project"
 
 **Map showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta**
 
-# Trees points cloud data handle by lidR package in R studio 
+# Trees points cloud data handle by lidR package in R studio
 
-## Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC 
+## Individual tree detection within a plot in Malcolm Knapp Research Forest (MKRF) UBC
 
 ## Code snippets
 

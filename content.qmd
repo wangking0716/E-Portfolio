@@ -1,59 +1,37 @@
 ---
-title: "Content & Deliverables"
+title: "Capstone Project"
 format: html
 editor: visual
 ---
 
-# Project 1 - Capstone Deliverables
+# Energy Consumption Comparison Between Electric Vehicles and Internal Combustion Vehicles Traveling Between Horseshoe Bay and Whistler
 
-This is a sample page where you can archive project deliverables. Every header you use will correspond to a tab in the legend - shown on the right-hand side of your screen ("On this page").
+## **Proposed Methods**
 
-If you've produced any GIS layers for your 599 project, this may be a good place to share them as interactive maps through leaflet. Alternatively, you can upload high-res figures showing correlations, box-plots, etc. from your report here, and provide a brief overview of key project results. If you have written some useful functions, you may also want to share those here to demonstrate proficiency in particular coding languages or synergies between notable coding packages.
+-   **Experimental Design**
 
-## Leaflet
+The goal of this research is to identify the energy cost of two different types of vehicles which are internal combustion vehicles (ICV) and electric vehicles (EV). The result will compare the financial cost of ICV (dollar/litter of gas) and EV (dollar/joule). The primary study sites cover the road segment between Horseshoe Bay and Whistler. The overall length of this study area is around 120 Km. The vehicle types for this research are Volvo XC 40 and EX 40. These two vehicles are built by the same company and under the same model with different power unit systems. Volvo XC 40 is a gasoline SUV and XE 40 is a fully electric SUV. Utilized two identical car models could  minimize the variable because different car models will cause different specifications and it could affect the energy consumption. The control factor in this experiment is the same model of the car with the different power units (internal combustion and electric vehicle), the average speed of travelling will be the same and the route characteristics will be identical as both vehicles will be running on the Sea to Sky Highway at the same segment.
 
-Sample leaflet - for detailed leaflet instructions, visit the FCOR 599 workshop archive page [here](https://ubc-mgem-fcor599.github.io/FCOR-599-Workshops/Interactive_Maps/leaflet.html).
+**Data pre-processing**
 
-```{r leaflet, include = FALSE}
-library(dplyr); library(leaflet)
+All of my geospatial data such as road data and DEM data will need geoprocessing through QGIS (3.38). Due to the complexity of the Canada Road Census Data, I would need several steps to simplify the data that I need for my study. First, I use the clip geoprocessing tool in QGIS to narrow down the road data to my desired region. Secondly, I assign points to each intersection of my clipped shapefile. Finally, I select feature by expression from the clipped shapefile attribute table to filter out the Highway 99 data. The attribute table also needs to be cleaned up as multiple data are not necessary for the study. The total length for each segment within my study areas also added to the attribute table by using the field calculator to find out the length of each road segment on Highway 99 in Kilometers (Km). There are multiple DEM raster data throughout my study area. Therefore, the multiple DEM raster data is combined into one DEM data for cleaning purposes. Finally, the elevation value of each point will be assigned by using the Sample Raster Values tool in QGIS. In the data processing step, Canada Road Census Data and DEM data of my study area are the main primary geospatial data for my input. After using QGIS for geoprocessing purposes, there is one final output that includes road data of my study area and elevation data of each point along the road segments.
 
-m <- leaflet() %>%
-  addProviderTiles("Esri.WorldImagery") %>%
-  addScaleBar(position = c("bottomleft")) %>%
-  setView(-123.1207, 49.2827, zoom = 11)
+![](images/clipboard-3809139970.png){width="610"}
 
-```
+**workflow of the proposed energy consumption comparison between ICV and EV**
 
-```{r map, echo=FALSE}
-m
-```
+## Expected Result 
 
-## Code Snippets
+For the expected result of this research, there will be some figures and maps that demonstrated how energy cost of different car model change during the trip between my study area. For example, the following graph shows the energy consumption of two different car model for each Km. Also, the figure shows the corresponding elevation change as well.
 
-Sample code snippet. Notice that you can provide a toggle to switch between coding languages - this is referred to as a 'tabset' in quarto. It is good practice to try and convert your R code to python, and vice-versa to demonstrate coding proficiency. For example, let's showcase a function for calculating NDVI in R and Python.
+![](images/clipboard-630309752.png)
 
-::: {.panel-tabset group="language"}
-## R
+For the final result of the project, another map will be generate to highlight the total energy consumption of both vehicles.
 
-``` (.r)
-calc_ndvi <- function(nir, red){ ndvi <- (nir-red)/(nir+red) return(ndvi) }
-```
+![](images/clipboard-2872793878.png)
 
-## Python
+It seems like the outcompete energy efficiency of EVs will eventually lead to total energy consumption. However, in the perspective of financial cost comparison between EVs and ICVs, lower total energy consumption does not necessary means less financial cost due to variety of EVs' charging method. Therefore, I would also provide a bar chart that compared the financial cost of different charging method.
 
-``` (.python)
-def calc_ndvi(nir, red): 
-  ndvi = (nir.astype(float)-red.astype(float))/(nir.astype(float)+red.astype(float))
-  return(ndvi)
-```
-:::
+![](images/clipboard-880813340.png)
 
-## External links
-
-You can also provide a frame linking to external websites. For example, here is a link to a Google Earth Engine application I developed. The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
-
-(To use the GEE tool, navigate to any city you'd like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)
-
-```{=html}
-<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool" title="Webpage example"></iframe>
-```
+The project's final results are expected to be released in May 2025.
