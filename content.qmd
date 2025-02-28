@@ -12,7 +12,7 @@ editor: visual
 
 The goal of this research is to identify the energy cost of two different types of vehicles which are internal combustion vehicles (ICV) and electric vehicles (EV). The result will compare the financial cost of ICV (dollar/litter of gas) and EV (dollar/joule). The primary study sites cover the road segment between Horseshoe Bay and Whistler. The overall length of this study area is around 120 Km. The vehicle types for this research are Volvo XC 40 and EX 40. These two vehicles are built by the same company and under the same model with different power unit systems. Volvo XC 40 is a gasoline SUV and XE 40 is a fully electric SUV. Utilized two identical car models could  minimize the variable because different car models will cause different specifications and it could affect the energy consumption. The control factor in this experiment is the same model of the car with the different power units (internal combustion and electric vehicle), the average speed of travelling will be the same and the route characteristics will be identical as both vehicles will be running on the Sea to Sky Highway at the same segment.
 
-**Data pre-processing**
+-   **Data pre-processing**
 
 All of my geospatial data such as road data and DEM data will need geoprocessing through QGIS (3.38). Due to the complexity of the Canada Road Census Data, I would need several steps to simplify the data that I need for my study. First, I use the clip geoprocessing tool in QGIS to narrow down the road data to my desired region. Secondly, I assign points to each intersection of my clipped shapefile. Finally, I select feature by expression from the clipped shapefile attribute table to filter out the Highway 99 data. The attribute table also needs to be cleaned up as multiple data are not necessary for the study. The total length for each segment within my study areas also added to the attribute table by using the field calculator to find out the length of each road segment on Highway 99 in Kilometers (Km). There are multiple DEM raster data throughout my study area. Therefore, the multiple DEM raster data is combined into one DEM data for cleaning purposes. Finally, the elevation value of each point will be assigned by using the Sample Raster Values tool in QGIS. In the data processing step, Canada Road Census Data and DEM data of my study area are the main primary geospatial data for my input. After using QGIS for geoprocessing purposes, there is one final output that includes road data of my study area and elevation data of each point along the road segments.
 
@@ -20,7 +20,7 @@ All of my geospatial data such as road data and DEM data will need geoprocessing
 
 **workflow of the proposed energy consumption comparison between ICV and EV**
 
-## Expected Result 
+## Expected Result
 
 For the expected result of this research, there will be some figures and maps that demonstrated how energy cost of different car model change during the trip between my study area. For example, the following graph shows the energy consumption of two different car model for each Km. Also, the figure shows the corresponding elevation change as well.
 
@@ -34,4 +34,4 @@ It seems like the outcompete energy efficiency of EVs will eventually lead to to
 
 ![](images/clipboard-880813340.png)
 
-The project's final results are expected to be released in May 2025.
+# [**The project's final results are expected to be released in May 2025.**]{.underline}
