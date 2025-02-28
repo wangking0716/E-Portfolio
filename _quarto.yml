@@ -11,9 +11,9 @@ website:
       - href: resume.qmd
         text: Resume
       - href: publications.qmd
-        text: Work & project
+        text: Work & Project
       - href: content.qmd
-        text: Content & Deliverables
+        text: Capstone Project 
 
 format:
   html:

@@ -18,7 +18,7 @@
     "href": "publications.html",
     "title": "work & project",
     "section": "",
-    "text": "Peer-reviewed publications:\nDespite listing them on your resume, it may also be pertinent to create a seperate tab for publications and reports. As your career progresses, this list may become quite long, so be sure to organize things. You may want to point to ‘most recent’ publications, or categorize things by project/topic."
+    "text": "Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro\nQGIS\n\nRasterize the study area of grizzly bear shapefile using GDAL\n\nThe polygons represent Grizzly Bear population units in the Rocky Mountain foothills of Alberta\n\nMosaicked 14 DEM tiles in the region into single raster using GDAL Merge tool.\nClipped the single DEM raster to the rasterize grizzly bear study area for further analysis\nGenerate a total cost raster representing cost of movement for grizzly bears\nThe cost factors include:\n\nslope\nland cover\nroad crossing\n\ncombined these factors using own-defined weights to create cost raster\n\nArcGIS Pro:\n\nPerform a least cost path analysis in ArcGIS Pro\n\ndefine the optimal route for moving between primary and secondary habitats\n\nAdding layers created in QGIS:\n\nTotal cost raster\nDEM of the study area\nslope, land cover, roads\nprimary/ secondary habitats\n\nUsing Distance Accumulation and Optimal Path as Line tool to create least-cost path between the primary and secondary habitats\n\n\nMap showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta"
   },
   {
     "objectID": "content_development.html",

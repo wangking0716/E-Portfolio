@@ -2,6 +2,48 @@
 title: "work & project"
 ---
 
-*Peer-reviewed publications:*
+***Raster and Least Cost Path Analysis Using QGIS and ArcGIS Pro***
 
-Despite listing them on your resume, it may also be pertinent to create a seperate tab for publications and reports. As your career progresses, this list may become quite long, so be sure to organize things. You may want to point to 'most recent' publications, or categorize things by project/topic. 
+**QGIS**
+
+-   Rasterize the study area of grizzly bear shapefile using GDAL
+
+    -   The polygons represent Grizzly Bear population units in the Rocky Mountain foothills of Alberta
+
+-   Mosaicked 14 DEM tiles in the region into single raster using GDAL Merge tool.
+
+-   Clipped the single DEM raster to the rasterize grizzly bear study area for further analysis
+
+-   Generate a total cost raster representing cost of movement for grizzly bears
+
+-   The cost factors include:
+
+    -   slope
+
+    -   land cover
+
+    -   road crossing
+
+-   combined these factors using own-defined weights to create cost raster
+
+**ArcGIS Pro:**
+
+-   Perform a least cost path analysis in ArcGIS Pro
+
+    -   define the optimal route for moving between primary and secondary habitats
+
+-   Adding layers created in QGIS:
+
+    -   Total cost raster
+
+    -   DEM of the study area
+
+    -   slope, land cover, roads
+
+    -   primary/ secondary habitats
+
+-   Using Distance Accumulation and Optimal Path as Line tool to create least-cost path between the primary and secondary habitats
+
+![](images/Screenshot_27-2-2025_231036_.jpeg){width="643"}
+
+**Map showing least-cost path of Grizzly Bear traveling between two habitats within bear management area in Alberta**
